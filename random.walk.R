@@ -5,10 +5,10 @@ wlen = as.integer(readline(prompt="How far should we walk? "))
 wstep = as.integer(readline(prompt="How big should are steps be? "))
 
 rwalk <- function(wlen) {
-  last = 0
+  current_step = 0
   while (i <= wlen) {
-    last <- last + rnorm(wstep)
-    w <- c(w, last) # Append random seed to vector
+    current_step <- current_step + rnorm(wstep) # Add random seed to current step
+    w <- c(w, last) # Append current step to vector
     i <- i + 1 # Increment counter
   }
   return(w)
