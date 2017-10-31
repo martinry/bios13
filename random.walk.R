@@ -8,11 +8,11 @@ rwalk <- function(wlen) {
   current_step = 0
   while (i <= wlen) {
     current_step <- current_step + rnorm(wstep) # Add random seed to current step
-    w <- c(w, last) # Append current step to vector
+    w <- c(w, current_step) # Append current step to vector
     i <- i + 1 # Increment counter
   }
   return(w)
 }
 
-p <- plot(rwalk(wlen), type='b')
+p <- plot(rwalk(wlen), type='b', col="red")
 
