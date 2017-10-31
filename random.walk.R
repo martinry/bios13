@@ -13,4 +13,3 @@ rwalk <- function(wlen) {
 }
 
 p <- plot(rwalk(wlen), type='b')
-
